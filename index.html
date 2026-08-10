@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============================================================
+     SEO — TÍTULO Y DESCRIPCIÓN
+     Reemplaza [MI NOMBRE] por tu nombre completo o de marca.
+     ============================================================ -->
+<title>[MI NOMBRE] | Entrenador Personal</title>
+<meta name="description" content="Entrenamiento personalizado, planificación y acompañamiento para ayudarte a alcanzar tus objetivos.">
+<meta name="theme-color" content="#0B0B0D">
+
+<!-- Open Graph (vista previa al compartir el enlace en WhatsApp/Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="[MI NOMBRE] | Entrenador Personal">
+<meta property="og:description" content="Entrenamiento personalizado, planificación y acompañamiento para ayudarte a alcanzar tus objetivos.">
+<!-- REEMPLAZAR: sube og-image.jpg (1200x630px) a tu carpeta y coloca aquí la URL final una vez publiques la página -->
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:locale" content="es_CO">
+
+<!-- Favicon: reemplaza favicon.png por tu propio ícono (puedes usar tu logo o tus iniciales) -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Tipografías: Oswald (display, deportiva/condensada) + Inter (texto) + JetBrains Mono (datos/precios) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     BARRA DE NAVEGACIÓN
+     ============================================================ -->
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav__brand">[MI NOMBRE]</a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a href="#" class="nav__cta" id="whatsappNavBtn" target="_blank" rel="noopener">Escríbeme</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============================================================
+     1. HERO / PORTADA
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero__media">
+    <!-- REEMPLAZAR: cambia hero-photo.jpg por tu fotografía profesional
+         Recomendado: foto vertical u horizontal, buena luz, mínimo 1200px de ancho -->
+    <img src="hero-photo.jpg" alt="[MI NOMBRE], entrenador personal" class="hero__img">
+    <div class="hero__scrim"></div>
+  </div>
+
+  <div class="hero__content">
+    <p class="eyebrow">Entrenador Personal · [CIUDAD]</p>
+    <h1 class="hero__title">[MI NOMBRE]</h1>
+    <p class="hero__tagline">Entrena con propósito. Progresa con estrategia.</p>
+    <div class="hero__actions">
+      <a href="#contacto" class="btn btn--primary">Agendar valoración</a>
+      <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+    </div>
+  </div>
+
+  <a href="#sobre-mi" class="hero__scroll" aria-label="Bajar a la siguiente sección">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============================================================
+     TICKER — elemento de firma visual (marcador tipo scoreboard)
+     Edita las palabras dentro de script.js → TICKER_ITEMS
+     ============================================================ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="tickerTrack"></div>
+</div>
+
+<!-- ============================================================
+     2. SOBRE MÍ
+     ============================================================ -->
+<section class="section" id="sobre-mi">
+  <div class="section__inner about">
+    <div class="about__label">
+      <p class="eyebrow">01 — Sobre mí</p>
+    </div>
+    <div class="about__content">
+      <h2 class="section__title">Quién soy</h2>
+      <!-- REEMPLAZAR: texto provisional, escribe tu propia presentación -->
+      <p class="about__text">
+        [TEXTO PROVISIONAL — REEMPLAZAR: Cuéntales quién eres, qué te llevó a
+        ser entrenador personal y qué te hace diferente. 3 a 5 líneas son suficientes.]
+      </p>
+
+      <dl class="about__facts">
+        <div class="about__fact">
+          <dt>Formación</dt>
+          <!-- REEMPLAZAR: tu formación profesional real -->
+          <dd>[FORMACIÓN PROFESIONAL — REEMPLAZAR]</dd>
+        </div>
+        <div class="about__fact">
+          <dt>Experiencia</dt>
+          <!-- REEMPLAZAR: años y tipo de experiencia -->
+          <dd>[EXPERIENCIA — REEMPLAZAR]</dd>
+        </div>
+        <div class="about__fact">
+          <dt>Especialidades</dt>
+          <!-- REEMPLAZAR: tus áreas de especialidad -->
+          <dd>[ESPECIALIDADES — REEMPLAZAR]</dd>
+        </div>
+        <div class="about__fact">
+          <dt>Filosofía</dt>
+          <!-- REEMPLAZAR: tu filosofía de entrenamiento -->
+          <dd>[FILOSOFÍA DE ENTRENAMIENTO — REEMPLAZAR]</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. SERVICIOS
+     Los precios están marcados con data-price y son fáciles de editar.
+     ============================================================ -->
+<section class="section section--dark" id="servicios">
+  <div class="section__inner">
+    <p class="eyebrow">02 — Servicios</p>
+    <h2 class="section__title">Cómo puedo ayudarte</h2>
+
+    <div class="cards">
+      <!-- SERVICIO 1 -->
+      <article class="card">
+        <h3 class="card__title">Entrenamiento personal</h3>
+        <p class="card__desc">Sesiones individuales adaptadas a tus objetivos, presenciales y 100% personalizadas.</p>
+        <ul class="card__benefits">
+          <li>Atención uno a uno</li>
+          <li>Ajustes en tiempo real</li>
+          <li>Progresión medible</li>
+        </ul>
+        <!-- REEMPLAZAR: precio real -->
+        <p class="card__price"><span class="card__price-label">Desde</span> $[PRECIO]<span class="card__price-unit">/sesión</span></p>
+        <a href="#contacto" class="btn btn--card" data-service="Entrenamiento personal">Quiero este servicio</a>
+      </article>
+
+      <!-- SERVICIO 2 -->
+      <article class="card">
+        <h3 class="card__title">Plan de entrenamiento</h3>
+        <p class="card__desc">Programa estructurado según tu objetivo, nivel y disponibilidad de tiempo.</p>
+        <ul class="card__benefits">
+          <li>Rutina a tu medida</li>
+          <li>Ajustes periódicos</li>
+          <li>Seguimiento de avances</li>
+        </ul>
+        <!-- REEMPLAZAR: precio real -->
+        <p class="card__price"><span class="card__price-label">Desde</span> $[PRECIO]<span class="card__price-unit">/mes</span></p>
+        <a href="#contacto" class="btn btn--card" data-service="Plan de entrenamiento">Quiero este servicio</a>
+      </article>
+
+      <!-- SERVICIO 3 -->
+      <article class="card card--featured">
+        <p class="card__badge">Más elegido</p>
+        <h3 class="card__title">Entrenamiento online</h3>
+        <p class="card__desc">Planificación y seguimiento a distancia, sin importar dónde estés.</p>
+        <ul class="card__benefits">
+          <li>Rutinas y ajustes por app/WhatsApp</li>
+          <li>Seguimiento constante</li>
+          <li>Flexibilidad de horario</li>
+        </ul>
+        <!-- REEMPLAZAR: precio real -->
+        <p class="card__price"><span class="card__price-label">Desde</span> $[PRECIO]<span class="card__price-unit">/mes</span></p>
+        <a href="#contacto" class="btn btn--card" data-service="Entrenamiento online">Quiero este servicio</a>
+      </article>
+
+      <!-- SERVICIO 4 -->
+      <article class="card">
+        <h3 class="card__title">Valoración física</h3>
+        <p class="card__desc">Evaluación inicial para conocer tu punto de partida y definir objetivos claros.</p>
+        <ul class="card__benefits">
+          <li>Diagnóstico inicial</li>
+          <li>Objetivos definidos</li>
+          <li>Plan de acción</li>
+        </ul>
+        <!-- REEMPLAZAR: precio real -->
+        <p class="card__price"><span class="card__price-label">Desde</span> $[PRECIO]<span class="card__price-unit">/valoración</span></p>
+        <a href="#contacto" class="btn btn--card" data-service="Valoración física">Quiero este servicio</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. ¿POR QUÉ ENTRENAR CONMIGO?
+     ============================================================ -->
+<section class="section" id="beneficios">
+  <div class="section__inner">
+    <p class="eyebrow">03 — Beneficios</p>
+    <h2 class="section__title">¿Por qué entrenar conmigo?</h2>
+
+    <div class="benefits">
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Entrenamiento personalizado</h3>
+        <p>Cada plan se construye alrededor de tus objetivos, no al revés.</p>
+      </div>
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 9-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Seguimiento del progreso</h3>
+        <p>Medimos avances de forma constante para ajustar lo que haga falta.</p>
+      </div>
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Planificación basada en objetivos</h3>
+        <p>Nada improvisado: cada sesión tiene un propósito dentro del plan.</p>
+      </div>
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Técnica y ejecución correcta</h3>
+        <p>Prevenimos lesiones y mejoramos resultados con buena forma.</p>
+      </div>
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.7C.6 8.4 2.7 5 6.1 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.4 0 5.5 3.4 3.6 7.3C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <h3>Adaptación al nivel de cada persona</h3>
+        <p>Principiante o avanzado: el punto de partida siempre eres tú.</p>
+      </div>
+      <div class="benefit">
+        <svg class="benefit__icon" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Acompañamiento durante el proceso</h3>
+        <p>No estás solo/a: hay soporte constante en cada etapa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. RESULTADOS / TESTIMONIOS
+     ============================================================ -->
+<section class="section section--dark" id="resultados">
+  <div class="section__inner">
+    <p class="eyebrow">04 — Resultados</p>
+    <h2 class="section__title">Lo que dicen mis clientes</h2>
+
+    <div class="testimonials">
+      <!-- TESTIMONIO DE EJEMPLO — REEMPLAZAR por testimonios reales -->
+      <blockquote class="testimonial">
+        <p>"TESTIMONIO DE EJEMPLO — REEMPLAZAR con la opinión real de un cliente."</p>
+        <cite>— Nombre del cliente, resultado obtenido</cite>
+      </blockquote>
+      <!-- TESTIMONIO DE EJEMPLO — REEMPLAZAR -->
+      <blockquote class="testimonial">
+        <p>"TESTIMONIO DE EJEMPLO — REEMPLAZAR con la opinión real de un cliente."</p>
+        <cite>— Nombre del cliente, resultado obtenido</cite>
+      </blockquote>
+      <!-- TESTIMONIO DE EJEMPLO — REEMPLAZAR -->
+      <blockquote class="testimonial">
+        <p>"TESTIMONIO DE EJEMPLO — REEMPLAZAR con la opinión real de un cliente."</p>
+        <cite>— Nombre del cliente, resultado obtenido</cite>
+      </blockquote>
+    </div>
+
+    <!-- Espacio preparado para fotos de progreso (opcional, agrega <img> aquí cuando las tengas) -->
+    <div class="progress-gallery" id="progressGallery">
+      <p class="progress-gallery__placeholder">[ESPACIO PARA FOTOS DE PROGRESO — agrega tus imágenes aquí cuando las tengas]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. LLAMADO A LA ACCIÓN
+     ============================================================ -->
+<section class="cta" id="cta">
+  <div class="cta__inner">
+    <h2 class="cta__title">¿Listo para empezar?</h2>
+    <p class="cta__text">Cuéntame cuáles son tus objetivos y encontremos la mejor estrategia para alcanzarlos.</p>
+    <a href="#" id="whatsappCtaBtn" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     7 & 8. CONTACTO Y REDES SOCIALES
+     ============================================================ -->
+<section class="section" id="contacto">
+  <div class="section__inner contact">
+    <div class="contact__info">
+      <p class="eyebrow">05 — Contacto</p>
+      <h2 class="section__title">Hablemos</h2>
+
+      <ul class="contact__list">
+        <li>
+          <span class="contact__label">WhatsApp</span>
+          <!-- REEMPLAZAR: número real (mismo que en script.js) -->
+          <a href="#" id="whatsappContactLink" target="_blank" rel="noopener">[NÚMERO DE WHATSAPP]</a>
+        </li>
+        <li>
+          <span class="contact__label">Instagram</span>
+          <!-- REEMPLAZAR: usuario real -->
+          <a href="#" id="instagramContactLink" target="_blank" rel="noopener">[@USUARIO_INSTAGRAM]</a>
+        </li>
+        <li>
+          <span class="contact__label">Ciudad</span>
+          <span>[CIUDAD]</span>
+        </li>
+        <li>
+          <span class="contact__label">Horarios</span>
+          <span>[HORARIOS DE ATENCIÓN — REEMPLAZAR]</span>
+        </li>
+      </ul>
+
+      <div class="social">
+        <!-- REEMPLAZAR: enlaces reales de tus redes -->
+        <a href="#" id="instagramSocialLink" class="social__link" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="#" id="tiktokSocialLink" class="social__link" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+        <a href="#" id="facebookSocialLink" class="social__link" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+
+    <form class="contact__form" id="contactForm">
+      <h3>Solicita tu valoración</h3>
+      <label>
+        Nombre
+        <input type="text" name="nombre" required>
+      </label>
+      <label>
+        ¿Cuál es tu objetivo?
+        <textarea name="objetivo" rows="3" required></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary">Enviar por WhatsApp</button>
+      <p class="contact__form-note">Se abrirá WhatsApp con tu mensaje ya escrito, listo para enviar.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <p>[MI NOMBRE] — ENTRENADOR PERSONAL</p>
+  <p>© <span id="year"></span> Todos los derechos reservados.</p>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="#" id="whatsappFloatBtn" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.36.66 4.56 1.8 6.44L4 29l7.73-1.75a11.9 11.9 0 0 0 4.28.79C22.64 28.04 28 22.66 28 16.03 28 9.4 22.64 3 16.01 3Zm0 21.6c-1.35 0-2.66-.29-3.85-.86l-.28-.14-4.58 1.04 1.02-4.47-.18-.29a9.5 9.5 0 0 1-1.5-5.12c0-5.28 4.3-9.58 9.6-9.58 2.56 0 4.97.99 6.78 2.79a9.52 9.52 0 0 1 2.79 6.77c0 5.3-4.3 9.86-9.8 9.86Zm5.36-7.18c-.29-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.15-.17.2-.35.22-.64.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.12-.26-.2-.55-.35Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
